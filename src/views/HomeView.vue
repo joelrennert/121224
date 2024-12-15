@@ -1,5 +1,6 @@
 <script setup>
 import SquareNoAnimation from '../components/SquareNoAnimation.vue'
+// import MainOverlay from '../components/MainOverlay.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import SquareNoAnimation from '../components/SquareNoAnimation.vue'
           transform: `scale(${5 - n * 0.01}) rotate(${n * 12424}deg) translate(${n * 2}px, ${n * 2}px)`
         }"
       />
+      <!-- <MainOverlay/> -->
     </div>
   </main>
 </template>
@@ -53,6 +55,26 @@ import SquareNoAnimation from '../components/SquareNoAnimation.vue'
   animation:
     square-animation 40s ease-in-out infinite,
     fadeIn 2s ease-in forwards;
+  transition: transform 0.5s ease, background 0.5s ease, box-shadow 0.5s ease;
+}
+
+.square:hover {
+  background: linear-gradient(135deg, #fcb04595, #fd1d1d7c 40%, #8463ae94);
+  background-size: 40% 40%;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.square:hover + .square,
+.square:hover ~ .square {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #fcb04595, #fd1d1d7c 40%, #8463ae94);
+  background-size: 40% 40%;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .container {
