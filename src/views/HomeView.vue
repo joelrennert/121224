@@ -61,25 +61,22 @@ import SquareNoAnimation from "../components/SquareNoAnimation.vue";
 .square:hover {
   background: linear-gradient(135deg, #fcb04595, #fd1d1d7c 40%, #8463ae94);
   background-size: 35% 35%;
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.15),
-    0 1px 3px rgba(0, 0, 0, 0.1);
+
   cursor: pointer;
 }
 
 .square:hover + .square,
-.square:hover ~ .square {
+.square:hover ~ .square,
+.square:active + .square,
+.square:active ~ .square {
   transform: scale(1.05);
   background: linear-gradient(135deg, #fcb04595, #fd1d1d7c 40%, #8463ae94);
   background-size: 40% 40%;
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.15),
-    0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
 .square:active {
   background: linear-gradient(140deg, #fcb04595, #fd1d1d7c 40%, #8463ae94);
-  background-size: 35% 35%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-size: 30% 30%;
 }
 
 .container {
@@ -100,8 +97,8 @@ main {
   font-family: "IBM Plex Mono";
   color: #333;
   background: linear-gradient(90deg, #8463ae94, #fd1d1d7c 40%, #fcb04595);
-  background-size: 300% 300%;
-  animation: gradient-shift 10s ease-in-out infinite;
+  background-size: 100% 300%;
+  /* animationo: gradient-shift 10s ease-in-out infinite; */
 }
 
 @keyframes gradient-shift {
