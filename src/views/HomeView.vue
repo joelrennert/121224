@@ -9,7 +9,7 @@ import SquareNoAnimation from "../components/SquareNoAnimation.vue";
         v-for="n in 50"
         :key="n"
         :style="{
-          transform: `scale(${5 - n * 0.01}) rotate(${n * 12424}deg) translate(${n * 2}px, ${n * 2}px)`,
+          transform: `scale(${5 - n * 0.01}) rotate(${n * 12424}deg) translate(${n * 3}px, ${n * 2}px)`,
         }"
         :class="{ square: true }"
       />
